@@ -1,0 +1,17 @@
+digraph "Dominator tree for '_Z4LICMv' function" {
+	label="Dominator tree for '_Z4LICMv' function";
+
+	Node0x5561dda25be0 [shape=record,label="{0:\l|  br label %1\l}"];
+	Node0x5561dda25be0 -> Node0x5561dda1ed40;
+	Node0x5561dda1ed40 [shape=record,label="{1:\l|  %.01 = phi i32 [ 20, %0 ], [ %10, %11 ]\l  %2 = add nsw i32 5, 10\l  %3 = srem i32 %.01, 2\l  %4 = icmp eq i32 %3, 0\l  br i1 %4, label %5, label %6\l}"];
+	Node0x5561dda1ed40 -> Node0x5561dda1e2b0;
+	Node0x5561dda1ed40 -> Node0x5561dda25c40;
+	Node0x5561dda1ed40 -> Node0x5561dda96d40;
+	Node0x5561dda1e2b0 [shape=record,label="{5:\l|  br label %7\l}"];
+	Node0x5561dda25c40 [shape=record,label="{7:\l|  %.0 = phi i32 [ 2, %5 ], [ 3, %6 ]\l  %8 = add nsw i32 %2, 1\l  %9 = add nsw i32 %.0, 2\l  %10 = sub nsw i32 %.01, 1\l  br label %11\l}"];
+	Node0x5561dda25c40 -> Node0x5561dda23350;
+	Node0x5561dda23350 [shape=record,label="{11:\l|  %12 = icmp sge i32 %10, 0\l  br i1 %12, label %1, label %13, !llvm.loop !6\l}"];
+	Node0x5561dda23350 -> Node0x5561dda96ce0;
+	Node0x5561dda96ce0 [shape=record,label="{13:\l|  ret i32 5\l}"];
+	Node0x5561dda96d40 [shape=record,label="{6:\l|  br label %7\l}"];
+}

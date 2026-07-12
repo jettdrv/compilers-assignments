@@ -1,0 +1,13 @@
+<map id="anonymous_namespace{LoopPass::cpp}::LoopPass::run" name="anonymous_namespace{LoopPass::cpp}::LoopPass::run">
+<area shape="rect" id="Node000001" title="Function pass che effettua tutte le trasformazioni sui loop." alt="" coords="5,142,231,186"/>
+<area shape="rect" id="Node000002" href="$namespaceanonymous__namespace_02LoopPass_8cpp_03.html#a054faec4aa60a575df9f084c51325c39" title="Controlla se è safe effettuare la code motion (o code hoisting)." alt="" coords="279,91,495,152"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="230,144,266,140,261,142,232,149"/>
+<area shape="rect" id="Node000006" href="$namespaceanonymous__namespace_02LoopPass_8cpp_03.html#a7cacdf7fb32ce75d904cfb0e265aecbf" title="Controlla se un&#39;istruzione è loop&#45;invariant." alt="" coords="279,176,495,238"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="231,179,266,187,261,187,231,185"/>
+<area shape="rect" id="Node000003" href="$namespaceanonymous__namespace_02LoopPass_8cpp_03.html#afa675cae143d8df31157c2e3c935f56d" title="Verifica se l&#39;istruzione candidata alla code motion domina tutte le uscite del loop." alt="" coords="566,5,771,67"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="490,88,549,72,554,71,492,93"/>
+<area shape="rect" id="Node000004" href="$namespaceanonymous__namespace_02LoopPass_8cpp_03.html#acf40036ee179411d1bd15be901a6aa0c" title="Verifica che tutti gli operandi definiti all&#39;interno del loop, siano già stati spostati nel preheader..." alt="" coords="560,91,778,152"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="495,119,547,121,542,122,496,124"/>
+<area shape="rect" id="Node000005" href="$namespaceanonymous__namespace_02LoopPass_8cpp_03.html#a86718ddcb22a6edc355cd14a85d9b0a9" title="Funzione che controlla se il valore definito dall&#39;istruzione corrente non viene mai utilizzato al di ..." alt="" coords="543,176,794,221"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="496,149,572,172,567,172,495,154"/>
+</map>

@@ -1,0 +1,175 @@
+\doxysubsection{Riferimenti per il namespace anonymous\+\_\+namespace\{Loop\+Pass.\+cpp\}}
+\hypertarget{namespaceanonymous__namespace_02LoopPass_8cpp_03}{}\label{namespaceanonymous__namespace_02LoopPass_8cpp_03}\index{anonymous\_namespace\lcurly{}LoopPass.cpp\rcurly{}@{anonymous\_namespace\lcurly{}LoopPass.cpp\rcurly{}}}
+\doxysubsubsubsection*{Composti}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structanonymous__namespace_02LoopPass_8cpp_03_1_1LoopPass}{Loop\+Pass}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Funzioni}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{namespaceanonymous__namespace_02LoopPass_8cpp_03_a7cacdf7fb32ce75d904cfb0e265aecbf}{is\+Instruction\+Invariant}} (Loop \texorpdfstring{$\ast$}{*}L, Instruction \texorpdfstring{$\ast$}{*}I, Small\+Ptr\+Set\+Impl$<$ Instruction \texorpdfstring{$\ast$}{*} $>$ \&Loop\+Invariant\+Ins)
+\begin{DoxyCompactList}\small\item\em Controlla se un\textquotesingle{}istruzione è loop-\/invariant. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{namespaceanonymous__namespace_02LoopPass_8cpp_03_afa675cae143d8df31157c2e3c935f56d}{dominates\+All\+Exits}} (Instruction \texorpdfstring{$\ast$}{*}I, Dominator\+Tree \&DT, const Small\+Vector\+Impl$<$ Basic\+Block \texorpdfstring{$\ast$}{*} $>$ \&exit\+Blocks)
+\begin{DoxyCompactList}\small\item\em Verifica se l\textquotesingle{}istruzione candidata alla code motion domina tutte le uscite del loop. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{namespaceanonymous__namespace_02LoopPass_8cpp_03_a86718ddcb22a6edc355cd14a85d9b0a9}{is\+Dead\+At\+Loop\+Exit}} (Instruction \texorpdfstring{$\ast$}{*}I, Loop \texorpdfstring{$\ast$}{*}L)
+\begin{DoxyCompactList}\small\item\em Funzione che controlla se il valore definito dall\textquotesingle{}istruzione corrente non viene mai utilizzato al di fuori del loop. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{namespaceanonymous__namespace_02LoopPass_8cpp_03_acf40036ee179411d1bd15be901a6aa0c}{inv\+Operands\+Moved}} (Instruction \texorpdfstring{$\ast$}{*}I, Loop \texorpdfstring{$\ast$}{*}L)
+\begin{DoxyCompactList}\small\item\em Verifica che tutti gli operandi definiti all\textquotesingle{}interno del loop, siano già stati spostati nel preheader. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{namespaceanonymous__namespace_02LoopPass_8cpp_03_a054faec4aa60a575df9f084c51325c39}{is\+Instruction\+Hoistable}} (Loop \texorpdfstring{$\ast$}{*}L, Instruction \texorpdfstring{$\ast$}{*}I, Dominator\+Tree \&DT, const Small\+Vector\+Impl$<$ Basic\+Block \texorpdfstring{$\ast$}{*} $>$ \&exit\+Blocks)
+\begin{DoxyCompactList}\small\item\em Controlla se è safe effettuare la code motion (o code hoisting). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespaceanonymous__namespace_02LoopPass_8cpp_03_doc-func-members}
+\doxysubsubsection{Documentazione delle funzioni}
+\Hypertarget{namespaceanonymous__namespace_02LoopPass_8cpp_03_afa675cae143d8df31157c2e3c935f56d}\index{anonymous\_namespace\lcurly{}LoopPass.cpp\rcurly{}@{anonymous\_namespace\lcurly{}LoopPass.cpp\rcurly{}}!dominatesAllExits@{dominatesAllExits}}
+\index{dominatesAllExits@{dominatesAllExits}!anonymous\_namespace\lcurly{}LoopPass.cpp\rcurly{}@{anonymous\_namespace\lcurly{}LoopPass.cpp\rcurly{}}}
+\doxyparagraph{\texorpdfstring{dominatesAllExits()}{dominatesAllExits()}}
+{\footnotesize\ttfamily \label{namespaceanonymous__namespace_02LoopPass_8cpp_03_afa675cae143d8df31157c2e3c935f56d} 
+bool anonymous\+\_\+namespace\{Loop\+Pass.\+cpp\}\+::dominates\+All\+Exits (\begin{DoxyParamCaption}\item[{Instruction \texorpdfstring{$\ast$}{*}}]{I}{, }\item[{Dominator\+Tree \&}]{DT}{, }\item[{const Small\+Vector\+Impl$<$ Basic\+Block \texorpdfstring{$\ast$}{*} $>$ \&}]{exit\+Blocks}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Verifica se l\textquotesingle{}istruzione candidata alla code motion domina tutte le uscite del loop. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em I} & puntatore all\textquotesingle{}istruzione candidata \\
+\hline
+{\em DT} & riferimento alla Dominator Tree \\
+\hline
+{\em exit\+Blocks} & vettore contenente i blocchi di uscita del loop \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+true se l\textquotesingle{}istruzione domina tutte le uscite, false altrimenti 
+\end{DoxyReturn}
+Questo è il grafo dei chiamanti di questa funzione\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceanonymous__namespace_02LoopPass_8cpp_03_afa675cae143d8df31157c2e3c935f56d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespaceanonymous__namespace_02LoopPass_8cpp_03_acf40036ee179411d1bd15be901a6aa0c}\index{anonymous\_namespace\lcurly{}LoopPass.cpp\rcurly{}@{anonymous\_namespace\lcurly{}LoopPass.cpp\rcurly{}}!invOperandsMoved@{invOperandsMoved}}
+\index{invOperandsMoved@{invOperandsMoved}!anonymous\_namespace\lcurly{}LoopPass.cpp\rcurly{}@{anonymous\_namespace\lcurly{}LoopPass.cpp\rcurly{}}}
+\doxyparagraph{\texorpdfstring{invOperandsMoved()}{invOperandsMoved()}}
+{\footnotesize\ttfamily \label{namespaceanonymous__namespace_02LoopPass_8cpp_03_acf40036ee179411d1bd15be901a6aa0c} 
+bool anonymous\+\_\+namespace\{Loop\+Pass.\+cpp\}\+::inv\+Operands\+Moved (\begin{DoxyParamCaption}\item[{Instruction \texorpdfstring{$\ast$}{*}}]{I}{, }\item[{Loop \texorpdfstring{$\ast$}{*}}]{L}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Verifica che tutti gli operandi definiti all\textquotesingle{}interno del loop, siano già stati spostati nel preheader. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em I} & puntatore all\textquotesingle{}istruzione considerata per lo spostamento \\
+\hline
+{\em L} & il loop corrente \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+true se gli operandi sono già stati spostati, false altrimenti 
+\end{DoxyReturn}
+Questo è il grafo dei chiamanti di questa funzione\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceanonymous__namespace_02LoopPass_8cpp_03_acf40036ee179411d1bd15be901a6aa0c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespaceanonymous__namespace_02LoopPass_8cpp_03_a86718ddcb22a6edc355cd14a85d9b0a9}\index{anonymous\_namespace\lcurly{}LoopPass.cpp\rcurly{}@{anonymous\_namespace\lcurly{}LoopPass.cpp\rcurly{}}!isDeadAtLoopExit@{isDeadAtLoopExit}}
+\index{isDeadAtLoopExit@{isDeadAtLoopExit}!anonymous\_namespace\lcurly{}LoopPass.cpp\rcurly{}@{anonymous\_namespace\lcurly{}LoopPass.cpp\rcurly{}}}
+\doxyparagraph{\texorpdfstring{isDeadAtLoopExit()}{isDeadAtLoopExit()}}
+{\footnotesize\ttfamily \label{namespaceanonymous__namespace_02LoopPass_8cpp_03_a86718ddcb22a6edc355cd14a85d9b0a9} 
+bool anonymous\+\_\+namespace\{Loop\+Pass.\+cpp\}\+::is\+Dead\+At\+Loop\+Exit (\begin{DoxyParamCaption}\item[{Instruction \texorpdfstring{$\ast$}{*}}]{I}{, }\item[{Loop \texorpdfstring{$\ast$}{*}}]{L}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Funzione che controlla se il valore definito dall\textquotesingle{}istruzione corrente non viene mai utilizzato al di fuori del loop. 
+
+Se l\textquotesingle{}istruzione non ha usi vivi all\textquotesingle{}esterno del loop, potremmo procedere con il code motion anche se l\textquotesingle{}istruzione non domina tutte le uscite del loop. 
+\begin{DoxyParams}{Parametri}
+{\em I} & puntatore all\textquotesingle{}istruzione \\
+\hline
+{\em L} & puntatore al loop corrente \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+true se il valore non viene mai usato fuori dal loop (dead at exit), false altrimenti 
+\end{DoxyReturn}
+Questo è il grafo dei chiamanti di questa funzione\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceanonymous__namespace_02LoopPass_8cpp_03_a86718ddcb22a6edc355cd14a85d9b0a9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespaceanonymous__namespace_02LoopPass_8cpp_03_a054faec4aa60a575df9f084c51325c39}\index{anonymous\_namespace\lcurly{}LoopPass.cpp\rcurly{}@{anonymous\_namespace\lcurly{}LoopPass.cpp\rcurly{}}!isInstructionHoistable@{isInstructionHoistable}}
+\index{isInstructionHoistable@{isInstructionHoistable}!anonymous\_namespace\lcurly{}LoopPass.cpp\rcurly{}@{anonymous\_namespace\lcurly{}LoopPass.cpp\rcurly{}}}
+\doxyparagraph{\texorpdfstring{isInstructionHoistable()}{isInstructionHoistable()}}
+{\footnotesize\ttfamily \label{namespaceanonymous__namespace_02LoopPass_8cpp_03_a054faec4aa60a575df9f084c51325c39} 
+bool anonymous\+\_\+namespace\{Loop\+Pass.\+cpp\}\+::is\+Instruction\+Hoistable (\begin{DoxyParamCaption}\item[{Loop \texorpdfstring{$\ast$}{*}}]{L}{, }\item[{Instruction \texorpdfstring{$\ast$}{*}}]{I}{, }\item[{Dominator\+Tree \&}]{DT}{, }\item[{const Small\+Vector\+Impl$<$ Basic\+Block \texorpdfstring{$\ast$}{*} $>$ \&}]{exit\+Blocks}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Controlla se è safe effettuare la code motion (o code hoisting). 
+
+
+\begin{DoxyParams}{Parametri}
+{\em I} & puntatore all\textquotesingle{}istruzione candidata \\
+\hline
+{\em DT} & riferimento alla Dominator Tree \\
+\hline
+{\em exit\+Blocks} & vettore contenente i blocchi di uscita del loop \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+true se l\textquotesingle{}istruzione può essere spostata nel preheader, false altrimenti 
+\end{DoxyReturn}
+Questo è il grafo delle chiamate per questa funzione\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceanonymous__namespace_02LoopPass_8cpp_03_a054faec4aa60a575df9f084c51325c39_cgraph}
+\end{center}
+\end{figure}
+Questo è il grafo dei chiamanti di questa funzione\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceanonymous__namespace_02LoopPass_8cpp_03_a054faec4aa60a575df9f084c51325c39_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespaceanonymous__namespace_02LoopPass_8cpp_03_a7cacdf7fb32ce75d904cfb0e265aecbf}\index{anonymous\_namespace\lcurly{}LoopPass.cpp\rcurly{}@{anonymous\_namespace\lcurly{}LoopPass.cpp\rcurly{}}!isInstructionInvariant@{isInstructionInvariant}}
+\index{isInstructionInvariant@{isInstructionInvariant}!anonymous\_namespace\lcurly{}LoopPass.cpp\rcurly{}@{anonymous\_namespace\lcurly{}LoopPass.cpp\rcurly{}}}
+\doxyparagraph{\texorpdfstring{isInstructionInvariant()}{isInstructionInvariant()}}
+{\footnotesize\ttfamily \label{namespaceanonymous__namespace_02LoopPass_8cpp_03_a7cacdf7fb32ce75d904cfb0e265aecbf} 
+bool anonymous\+\_\+namespace\{Loop\+Pass.\+cpp\}\+::is\+Instruction\+Invariant (\begin{DoxyParamCaption}\item[{Loop \texorpdfstring{$\ast$}{*}}]{L}{, }\item[{Instruction \texorpdfstring{$\ast$}{*}}]{I}{, }\item[{Small\+Ptr\+Set\+Impl$<$ Instruction \texorpdfstring{$\ast$}{*} $>$ \&}]{Loop\+Invariant\+Ins}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Controlla se un\textquotesingle{}istruzione è loop-\/invariant. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em L} & \\
+\hline
+{\em I} & puntatore all\textquotesingle{}istruzione in esaminazione \\
+\hline
+{\em Loop\+Invariant\+Ins} & riferimento al set contenente le istruzioni già marcate come loop-\/invariant \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+true se l\textquotesingle{}istruzione è loop-\/invariant, false altrimenti 
+\end{DoxyReturn}
+Questo è il grafo dei chiamanti di questa funzione\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceanonymous__namespace_02LoopPass_8cpp_03_a7cacdf7fb32ce75d904cfb0e265aecbf_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,88 @@
+\doxysubsection{Riferimenti per il file Loop\+Pass.\+cpp}
+\hypertarget{LoopPass_8cpp}{}\label{LoopPass_8cpp}\index{LoopPass.cpp@{LoopPass.cpp}}
+
+
+Implementazione del pass per la Loop-\/\+Invariant Code Motion.  
+
+
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include "{}llvm/\+IR/\+Function.\+h"{}}\newline
+{\ttfamily \#include "{}llvm/\+IR/\+Instructions.\+h"{}}\newline
+{\ttfamily \#include "{}llvm/\+IR/\+Constants.\+h"{}}\newline
+{\ttfamily \#include "{}llvm/\+Analysis/\+Loop\+Info.\+h"{}}\newline
+{\ttfamily \#include "{}llvm/\+Passes/\+Pass\+Builder.\+h"{}}\newline
+{\ttfamily \#include "{}llvm/\+Passes/\+Pass\+Plugin.\+h"{}}\newline
+{\ttfamily \#include "{}llvm/\+Support/raw\+\_\+ostream.\+h"{}}\newline
+{\ttfamily \#include "{}llvm/\+IR/\+Dominators.\+h"{}}\newline
+{\ttfamily \#include "{}llvm/\+ADT/\+Depth\+First\+Iterator.\+h"{}}\newline
+{\ttfamily \#include "{}llvm/\+ADT/\+Small\+Ptr\+Set.\+h"{}}\newline
+Grafo delle dipendenze di inclusione per Loop\+Pass.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{LoopPass_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsubsection*{Composti}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structanonymous__namespace_02LoopPass_8cpp_03_1_1LoopPass}{anonymous\+\_\+namespace\{\+Loop\+Pass.\+cpp\}\+::\+Loop\+Pass}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Namespace}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceanonymous__namespace_02LoopPass_8cpp_03}{anonymous\+\_\+namespace\{\+Loop\+Pass.\+cpp\}}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Funzioni}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{namespaceanonymous__namespace_02LoopPass_8cpp_03_a7cacdf7fb32ce75d904cfb0e265aecbf}{anonymous\+\_\+namespace\{\+Loop\+Pass.\+cpp\}\+::is\+Instruction\+Invariant}} (Loop \texorpdfstring{$\ast$}{*}L, Instruction \texorpdfstring{$\ast$}{*}I, Small\+Ptr\+Set\+Impl$<$ Instruction \texorpdfstring{$\ast$}{*} $>$ \&Loop\+Invariant\+Ins)
+\begin{DoxyCompactList}\small\item\em Controlla se un\textquotesingle{}istruzione è loop-\/invariant. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{namespaceanonymous__namespace_02LoopPass_8cpp_03_afa675cae143d8df31157c2e3c935f56d}{anonymous\+\_\+namespace\{\+Loop\+Pass.\+cpp\}\+::dominates\+All\+Exits}} (Instruction \texorpdfstring{$\ast$}{*}I, Dominator\+Tree \&DT, const Small\+Vector\+Impl$<$ Basic\+Block \texorpdfstring{$\ast$}{*} $>$ \&exit\+Blocks)
+\begin{DoxyCompactList}\small\item\em Verifica se l\textquotesingle{}istruzione candidata alla code motion domina tutte le uscite del loop. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{namespaceanonymous__namespace_02LoopPass_8cpp_03_a86718ddcb22a6edc355cd14a85d9b0a9}{anonymous\+\_\+namespace\{\+Loop\+Pass.\+cpp\}\+::is\+Dead\+At\+Loop\+Exit}} (Instruction \texorpdfstring{$\ast$}{*}I, Loop \texorpdfstring{$\ast$}{*}L)
+\begin{DoxyCompactList}\small\item\em Funzione che controlla se il valore definito dall\textquotesingle{}istruzione corrente non viene mai utilizzato al di fuori del loop. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{namespaceanonymous__namespace_02LoopPass_8cpp_03_acf40036ee179411d1bd15be901a6aa0c}{anonymous\+\_\+namespace\{\+Loop\+Pass.\+cpp\}\+::inv\+Operands\+Moved}} (Instruction \texorpdfstring{$\ast$}{*}I, Loop \texorpdfstring{$\ast$}{*}L)
+\begin{DoxyCompactList}\small\item\em Verifica che tutti gli operandi definiti all\textquotesingle{}interno del loop, siano già stati spostati nel preheader. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{namespaceanonymous__namespace_02LoopPass_8cpp_03_a054faec4aa60a575df9f084c51325c39}{anonymous\+\_\+namespace\{\+Loop\+Pass.\+cpp\}\+::is\+Instruction\+Hoistable}} (Loop \texorpdfstring{$\ast$}{*}L, Instruction \texorpdfstring{$\ast$}{*}I, Dominator\+Tree \&DT, const Small\+Vector\+Impl$<$ Basic\+Block \texorpdfstring{$\ast$}{*} $>$ \&exit\+Blocks)
+\begin{DoxyCompactList}\small\item\em Controlla se è safe effettuare la code motion (o code hoisting). \end{DoxyCompactList}\item 
+llvm\+::\+Pass\+Plugin\+Library\+Info \mbox{\hyperlink{LoopPass_8cpp_a06baafde0015ade0ec600bf206a4db51}{get\+Loop\+Pass\+Plugin\+Info}} ()
+\item 
+LLVM\+\_\+\+ATTRIBUTE\+\_\+\+WEAK\+::llvm\+::\+Pass\+Plugin\+Library\+Info \mbox{\hyperlink{LoopPass_8cpp_a6a38583d4b9115cf1b28be6f952eed6f}{llvm\+Get\+Pass\+Plugin\+Info}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Descrizione dettagliata}
+Implementazione del pass per la Loop-\/\+Invariant Code Motion. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{LoopPass_8cpp_doc-func-members}
+\doxysubsubsection{Documentazione delle funzioni}
+\Hypertarget{LoopPass_8cpp_a06baafde0015ade0ec600bf206a4db51}\index{LoopPass.cpp@{LoopPass.cpp}!getLoopPassPluginInfo@{getLoopPassPluginInfo}}
+\index{getLoopPassPluginInfo@{getLoopPassPluginInfo}!LoopPass.cpp@{LoopPass.cpp}}
+\doxyparagraph{\texorpdfstring{getLoopPassPluginInfo()}{getLoopPassPluginInfo()}}
+{\footnotesize\ttfamily \label{LoopPass_8cpp_a06baafde0015ade0ec600bf206a4db51} 
+llvm\+::\+Pass\+Plugin\+Library\+Info get\+Loop\+Pass\+Plugin\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Questo è il grafo dei chiamanti di questa funzione\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{LoopPass_8cpp_a06baafde0015ade0ec600bf206a4db51_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{LoopPass_8cpp_a6a38583d4b9115cf1b28be6f952eed6f}\index{LoopPass.cpp@{LoopPass.cpp}!llvmGetPassPluginInfo@{llvmGetPassPluginInfo}}
+\index{llvmGetPassPluginInfo@{llvmGetPassPluginInfo}!LoopPass.cpp@{LoopPass.cpp}}
+\doxyparagraph{\texorpdfstring{llvmGetPassPluginInfo()}{llvmGetPassPluginInfo()}}
+{\footnotesize\ttfamily \label{LoopPass_8cpp_a6a38583d4b9115cf1b28be6f952eed6f} 
+LLVM\+\_\+\+ATTRIBUTE\+\_\+\+WEAK\+::llvm\+::\+Pass\+Plugin\+Library\+Info llvm\+Get\+Pass\+Plugin\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Questo è il grafo delle chiamate per questa funzione\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{LoopPass_8cpp_a6a38583d4b9115cf1b28be6f952eed6f_cgraph}
+\end{center}
+\end{figure}

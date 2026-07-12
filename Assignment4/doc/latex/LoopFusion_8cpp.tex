@@ -1,0 +1,79 @@
+\doxysubsection{Riferimenti per il file Loop\+Fusion.\+cpp}
+\hypertarget{LoopFusion_8cpp}{}\label{LoopFusion_8cpp}\index{LoopFusion.cpp@{LoopFusion.cpp}}
+
+
+Implementazione del pass per la Loop Fusion.  
+
+
+{\ttfamily \#include "{}Loop\+Fusion.\+h"{}}\newline
+Grafo delle dipendenze di inclusione per Loop\+Fusion.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{LoopFusion_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsubsection*{Namespace}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceanonymous__namespace_02LoopFusion_8cpp_03}{anonymous\+\_\+namespace\{\+Loop\+Fusion.\+cpp\}}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Funzioni}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{namespaceanonymous__namespace_02LoopFusion_8cpp_03_a1924f54aed67c6f560a28ca453ef2da8}{anonymous\+\_\+namespace\{\+Loop\+Fusion.\+cpp\}\+::is\+Fusion\+Candidate}} (Loop \texorpdfstring{$\ast$}{*}L)
+\begin{DoxyCompactList}\small\item\em Funzione che controlla se un loop è adatto alla fusione. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{namespaceanonymous__namespace_02LoopFusion_8cpp_03_a0dfbeba8a358da668abde9790aba6f03}{anonymous\+\_\+namespace\{\+Loop\+Fusion.\+cpp\}\+::sort\+CFESet}} (Small\+Vector$<$ Loop \texorpdfstring{$\ast$}{*}, 4 $>$ \&Set, Dominator\+Tree \&DT)
+\begin{DoxyCompactList}\small\item\em Procedura che ordina i loop per dominanza. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{namespaceanonymous__namespace_02LoopFusion_8cpp_03_a79dfe20af0b1436a02dc11d05934b1f9}{anonymous\+\_\+namespace\{\+Loop\+Fusion.\+cpp\}\+::are\+Adjacent}} (Loop \texorpdfstring{$\ast$}{*}L0, Loop \texorpdfstring{$\ast$}{*}L1)
+\begin{DoxyCompactList}\small\item\em Funzione che verifica l\textquotesingle{}adiacenza tra due loop. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{namespaceanonymous__namespace_02LoopFusion_8cpp_03_a93427cc45eb9428947637f86a8ba2bb4}{anonymous\+\_\+namespace\{\+Loop\+Fusion.\+cpp\}\+::have\+Idloop\+Trip\+Count}} (Loop \texorpdfstring{$\ast$}{*}L0, Loop \texorpdfstring{$\ast$}{*}L1, Scalar\+Evolution \&SE)
+\begin{DoxyCompactList}\small\item\em Funzione che confronta il loop trip count di due loop utilizzando la Scalar Evolution. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{namespaceanonymous__namespace_02LoopFusion_8cpp_03_accbd8641614ea7d814d5c2d5413c92b8}{anonymous\+\_\+namespace\{\+Loop\+Fusion.\+cpp\}\+::are\+Control\+Flow\+Eq}} (Loop \texorpdfstring{$\ast$}{*}L0, Loop \texorpdfstring{$\ast$}{*}L1, Dominator\+Tree \&DT, Post\+Dominator\+Tree \&PDT)
+\begin{DoxyCompactList}\small\item\em Funzione che determina se due loop sono control flow equivalenti, ovvero se L0 domina L1, allora L1 postdomina L0. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{namespaceanonymous__namespace_02LoopFusion_8cpp_03_a15a89a3ce8141cd5607cbb26ae5ebb27}{anonymous\+\_\+namespace\{\+Loop\+Fusion.\+cpp\}\+::dependence\+Analysis}} (Loop \texorpdfstring{$\ast$}{*}L0, Loop \texorpdfstring{$\ast$}{*}L1, Dependence\+Info \&DI)
+\begin{DoxyCompactList}\small\item\em Funzione che analizza le dipendenze. \end{DoxyCompactList}\item 
+static Basic\+Block \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespaceanonymous__namespace_02LoopFusion_8cpp_03_a58f8a5d98092a03a918b52b1bde5804b}{anonymous\+\_\+namespace\{\+Loop\+Fusion.\+cpp\}\+::get\+Loop\+Body\+Entry}} (Loop \texorpdfstring{$\ast$}{*}L)
+\begin{DoxyCompactList}\small\item\em Funzione che trova il primo blocco del corpo di un loop. \end{DoxyCompactList}\item 
+static Loop \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespaceanonymous__namespace_02LoopFusion_8cpp_03_ab9bb7c5946509cec7c5a70196b1738ea}{anonymous\+\_\+namespace\{\+Loop\+Fusion.\+cpp\}\+::fuse\+Loops}} (Loop \texorpdfstring{$\ast$}{*}L0, Loop \texorpdfstring{$\ast$}{*}L1, Loop\+Info \&LI, Dominator\+Tree \&DT)
+\begin{DoxyCompactList}\small\item\em Funzione che fonde i due loop e ritorna il loop fuso. \end{DoxyCompactList}\item 
+llvm\+::\+Pass\+Plugin\+Library\+Info \mbox{\hyperlink{LoopFusion_8cpp_a151900f6612f02066fe789461df757cf}{get\+Loop\+Fusion\+Pass\+Plugin\+Info}} ()
+\item 
+LLVM\+\_\+\+ATTRIBUTE\+\_\+\+WEAK\+::llvm\+::\+Pass\+Plugin\+Library\+Info \mbox{\hyperlink{LoopFusion_8cpp_a6a38583d4b9115cf1b28be6f952eed6f}{llvm\+Get\+Pass\+Plugin\+Info}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Descrizione dettagliata}
+Implementazione del pass per la Loop Fusion. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{LoopFusion_8cpp_doc-func-members}
+\doxysubsubsection{Documentazione delle funzioni}
+\Hypertarget{LoopFusion_8cpp_a151900f6612f02066fe789461df757cf}\index{LoopFusion.cpp@{LoopFusion.cpp}!getLoopFusionPassPluginInfo@{getLoopFusionPassPluginInfo}}
+\index{getLoopFusionPassPluginInfo@{getLoopFusionPassPluginInfo}!LoopFusion.cpp@{LoopFusion.cpp}}
+\doxyparagraph{\texorpdfstring{getLoopFusionPassPluginInfo()}{getLoopFusionPassPluginInfo()}}
+{\footnotesize\ttfamily \label{LoopFusion_8cpp_a151900f6612f02066fe789461df757cf} 
+llvm\+::\+Pass\+Plugin\+Library\+Info get\+Loop\+Fusion\+Pass\+Plugin\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Questo è il grafo dei chiamanti di questa funzione\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{LoopFusion_8cpp_a151900f6612f02066fe789461df757cf_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{LoopFusion_8cpp_a6a38583d4b9115cf1b28be6f952eed6f}\index{LoopFusion.cpp@{LoopFusion.cpp}!llvmGetPassPluginInfo@{llvmGetPassPluginInfo}}
+\index{llvmGetPassPluginInfo@{llvmGetPassPluginInfo}!LoopFusion.cpp@{LoopFusion.cpp}}
+\doxyparagraph{\texorpdfstring{llvmGetPassPluginInfo()}{llvmGetPassPluginInfo()}}
+{\footnotesize\ttfamily \label{LoopFusion_8cpp_a6a38583d4b9115cf1b28be6f952eed6f} 
+LLVM\+\_\+\+ATTRIBUTE\+\_\+\+WEAK\+::llvm\+::\+Pass\+Plugin\+Library\+Info llvm\+Get\+Pass\+Plugin\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Questo è il grafo delle chiamate per questa funzione\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{LoopFusion_8cpp_a6a38583d4b9115cf1b28be6f952eed6f_cgraph}
+\end{center}
+\end{figure}

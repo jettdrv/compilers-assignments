@@ -1,0 +1,9 @@
+/home/jeta/Documenti/compilatori2/compilatori2/Laboratori_Compilatori/assignments/Assignment4/build/CMakeFiles/intrinsics_gen.dir
+/home/jeta/Documenti/compilatori2/compilatori2/Laboratori_Compilatori/assignments/Assignment4/build/CMakeFiles/omp_gen.dir
+/home/jeta/Documenti/compilatori2/compilatori2/Laboratori_Compilatori/assignments/Assignment4/build/CMakeFiles/acc_gen.dir
+/home/jeta/Documenti/compilatori2/compilatori2/Laboratori_Compilatori/assignments/Assignment4/build/CMakeFiles/ARMTargetParserTableGen.dir
+/home/jeta/Documenti/compilatori2/compilatori2/Laboratori_Compilatori/assignments/Assignment4/build/CMakeFiles/AArch64TargetParserTableGen.dir
+/home/jeta/Documenti/compilatori2/compilatori2/Laboratori_Compilatori/assignments/Assignment4/build/CMakeFiles/RISCVTargetParserTableGen.dir
+/home/jeta/Documenti/compilatori2/compilatori2/Laboratori_Compilatori/assignments/Assignment4/build/CMakeFiles/LoopFusion.dir
+/home/jeta/Documenti/compilatori2/compilatori2/Laboratori_Compilatori/assignments/Assignment4/build/CMakeFiles/edit_cache.dir
+/home/jeta/Documenti/compilatori2/compilatori2/Laboratori_Compilatori/assignments/Assignment4/build/CMakeFiles/rebuild_cache.dir

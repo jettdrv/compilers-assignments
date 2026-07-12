@@ -1,0 +1,9 @@
+<map id="anonymous_namespace{LoopPass::cpp}::isInstructionHoistable" name="anonymous_namespace{LoopPass::cpp}::isInstructionHoistable">
+<area shape="rect" id="Node000001" title="Controlla se è safe effettuare la code motion (o code hoisting)." alt="" coords="5,91,222,152"/>
+<area shape="rect" id="Node000002" href="$namespaceanonymous__namespace_02LoopPass_8cpp_03.html#afa675cae143d8df31157c2e3c935f56d" title="Verifica se l&#39;istruzione candidata alla code motion domina tutte le uscite del loop." alt="" coords="293,5,498,67"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,88,280,70,276,73,219,93"/>
+<area shape="rect" id="Node000003" href="$namespaceanonymous__namespace_02LoopPass_8cpp_03.html#acf40036ee179411d1bd15be901a6aa0c" title="Verifica che tutti gli operandi definiti all&#39;interno del loop, siano già stati spostati nel preheader..." alt="" coords="286,91,504,152"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="222,119,273,121,268,122,222,124"/>
+<area shape="rect" id="Node000004" href="$namespaceanonymous__namespace_02LoopPass_8cpp_03.html#a86718ddcb22a6edc355cd14a85d9b0a9" title="Funzione che controlla se il valore definito dall&#39;istruzione corrente non viene mai utilizzato al di ..." alt="" coords="270,176,521,221"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="222,149,299,171,294,172,222,154"/>
+</map>

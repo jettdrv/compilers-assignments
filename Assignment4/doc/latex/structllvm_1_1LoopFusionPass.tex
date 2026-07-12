@@ -1,0 +1,60 @@
+\doxysubsection{Riferimenti per la struct llvm\+::Loop\+Fusion\+Pass}
+\hypertarget{structllvm_1_1LoopFusionPass}{}\label{structllvm_1_1LoopFusionPass}\index{llvm::LoopFusionPass@{llvm::LoopFusionPass}}
+
+
+{\ttfamily \#include $<$Loop\+Fusion.\+h$>$}
+
+
+
+Diagramma delle classi per llvm\+::Loop\+Fusion\+Pass\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{structllvm_1_1LoopFusionPass__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagramma di collaborazione per llvm\+::Loop\+Fusion\+Pass\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{structllvm_1_1LoopFusionPass__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsubsection*{Membri pubblici}
+\begin{DoxyCompactItemize}
+\item 
+Preserved\+Analyses \mbox{\hyperlink{structllvm_1_1LoopFusionPass_acc49f0536ad9a2d585c3886e8767f407}{run}} (Function \&F, Function\+Analysis\+Manager \&AM)
+\begin{DoxyCompactList}\small\item\em Function pass che effettua tutte le trasformazioni sui loop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{structllvm_1_1LoopFusionPass_doc-func-members}
+\doxysubsubsection{Documentazione delle funzioni membro}
+\Hypertarget{structllvm_1_1LoopFusionPass_acc49f0536ad9a2d585c3886e8767f407}\index{llvm::LoopFusionPass@{llvm::LoopFusionPass}!run@{run}}
+\index{run@{run}!llvm::LoopFusionPass@{llvm::LoopFusionPass}}
+\doxyparagraph{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \label{structllvm_1_1LoopFusionPass_acc49f0536ad9a2d585c3886e8767f407} 
+Preserved\+Analyses Loop\+Fusion\+Pass\+::run (\begin{DoxyParamCaption}\item[{Function \&}]{F}{, }\item[{Function\+Analysis\+Manager \&}]{AM}{}\end{DoxyParamCaption})}
+
+
+
+Function pass che effettua tutte le trasformazioni sui loop. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em F} & Funzione su cui applicare i passi di trasformazione \\
+\hline
+{\em AM} & New pass manager per funzioni \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+Un oggetto Preserved\+Analyses che indica quali analisi sono rimaste valide dopo il pass 
+\end{DoxyReturn}
+
+
+La documentazione per questa struct è stata generata a partire dai seguenti file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{LoopFusion_8h}{Loop\+Fusion.\+h}}\item 
+\mbox{\hyperlink{LoopFusion_8cpp}{Loop\+Fusion.\+cpp}}\end{DoxyCompactItemize}

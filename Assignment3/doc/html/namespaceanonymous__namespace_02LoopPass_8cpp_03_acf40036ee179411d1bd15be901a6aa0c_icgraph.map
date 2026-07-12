@@ -1,0 +1,7 @@
+<map id="anonymous_namespace{LoopPass::cpp}::invOperandsMoved" name="anonymous_namespace{LoopPass::cpp}::invOperandsMoved">
+<area shape="rect" id="Node000001" title="Verifica che tutti gli operandi definiti all&#39;interno del loop, siano già stati spostati nel preheader..." alt="" coords="543,5,761,67"/>
+<area shape="rect" id="Node000002" href="$namespaceanonymous__namespace_02LoopPass_8cpp_03.html#a054faec4aa60a575df9f084c51325c39" title="Controlla se è safe effettuare la code motion (o code hoisting)." alt="" coords="279,5,495,67"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="525,36,495,39,495,34,530,36"/>
+<area shape="rect" id="Node000003" href="$structanonymous__namespace_02LoopPass_8cpp_03_1_1LoopPass.html#a538e265b03fd16977fd2f3f2f8c24663" title="Function pass che effettua tutte le trasformazioni sui loop." alt="" coords="5,14,231,58"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="260,36,231,39,231,34,265,36"/>
+</map>
