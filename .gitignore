@@ -1,4 +1,4 @@
-/build/
+**/build/
 *.o
 *.so
 *.dylib
@@ -35,3 +35,5 @@ Thumbs.db
 *~
 /*.bc
 /*.s
+**/img/
+*.tex
