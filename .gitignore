@@ -27,6 +27,7 @@
 *.nav
 *.snm
 *.vrb
+*.tex
 .DS_Store
 Thumbs.db
 .vscode/
