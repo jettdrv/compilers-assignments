@@ -14,10 +14,10 @@ Repository contenente gli assignments del corso di Linguaggi e Compilatori - Par
 * Quarto assignment: Loop Fusion
 
 ## Guida alla compilazione
-'''
+```
 export LLVM_DIR=<installation/dir/of/llvm>/bin
 mkdir build 
 cd build
 cmake -DLT_LLVM_INSTALL_DIR=$LLVM_DIR <source/dir/test/pass>
 make
-'''
+```
